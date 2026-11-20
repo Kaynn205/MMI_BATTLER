@@ -9,13 +9,13 @@ class LocalLobbyPage extends StatefulWidget {
 
 class _LobbyPageState extends State<LocalLobbyPage> {
   // Placeholder du code de la partie (à remplacer par un vrai code plus tard)
-  final String _code = 'XXXX';
-  bool _ready = false;
+  final String code = 'XXXX';
+  bool ready = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Lobby')),
+      appBar: AppBar(title: const Text('Retour')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -23,7 +23,7 @@ class _LobbyPageState extends State<LocalLobbyPage> {
             const Text('Code de la partie', style: TextStyle(fontSize: 32)),
             const SizedBox(height: 16),
             Text(
-              _code,
+              code,
               style: const TextStyle(
                 fontSize: 96,
                 fontWeight: FontWeight.bold,
@@ -32,16 +32,16 @@ class _LobbyPageState extends State<LocalLobbyPage> {
             ),
             const SizedBox(height: 48),
             ElevatedButton(
-              onPressed: () => setState(() => _ready = !_ready),
+              onPressed: () => setState(() => ready = !ready),
               child: Text(
-                _ready ? 'Prêt ✓' : 'Prêt',
+                ready ? 'Prêt ✓' : 'Prêt',
                 style: const TextStyle(fontSize: 32),
               ),
             ),
             const SizedBox(height: 16),
             ElevatedButton(
               // Désactivé tant que le joueur n'est pas prêt
-              onPressed: _ready ? () {} : null,
+              onPressed: ready ? () {} : null,
               child: const Text('Lancer', style: TextStyle(fontSize: 32)),
             ),
           ],

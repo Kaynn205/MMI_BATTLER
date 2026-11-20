@@ -46,7 +46,7 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const LocalLobbyPage(),
+                    builder: (context) => const OnlineLobbyPage(),
                   ),
                 );
               },

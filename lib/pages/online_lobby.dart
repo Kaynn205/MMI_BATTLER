@@ -15,7 +15,7 @@ class _LobbyPageState extends State<OnlineLobbyPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Lobby')),
+      appBar: AppBar(title: const Text('Retour')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
