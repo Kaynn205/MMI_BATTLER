@@ -11,8 +11,7 @@ Future<Database> openAppDatabase() async {
     version: 1,
     onCreate: (db, version) async {
       await db.execute(
-        'CREATE TABLE Todo (id INTEGER PRIMARY KEY, title TEXT NOT NULL, '
-        'done INTEGER NOT NULL)',
+        'CREATE TABLE Players (id INTEGER PRIMARY KEY, health_point INT, ',
       );
     },
   );
