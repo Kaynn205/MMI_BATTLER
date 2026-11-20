@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "name": "Pierre",
+    "matchup": [
+      2
+    ],
+    "rarity": 0
+  },
+  {
+    "id": 1,
+    "name": "Feuille",
+    "matchup": [
+      0
+    ],
+    "rarity": 0
+  },
+  {
+    "id": 2,
+    "name": "Ciseaux",
+    "matchup": [
+      1
+    ],
+    "rarity": 0
+  }
+]
