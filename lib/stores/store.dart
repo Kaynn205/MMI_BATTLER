@@ -1,34 +1,37 @@
-import 'package:path/path.dart';
-import 'package:sqflite/sqflite.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-/// Opens the database. Call it once and keep the result.
-Future<Database> openAppDatabase() async {
-  // Android: /data/data/<package>/databases, iOS and macOS: Documents.
-  var path = join(await getDatabasesPath(), 'app.db');
-  return openDatabase(
-    path,
-    // Increment the version (and handle it in onUpgrade) on schema changes.
-    version: 1,
-    onCreate: (db, version) async {
-      await db.execute(
-        'CREATE TABLE Players (id INTEGER PRIMARY KEY, health_point INT, ',
-      );
-    },
-  );
+Future<void> saveData() async {
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+
+  await prefs.setString('username', 'JohnDoe');
+  await prefs.setInt('age', 25);
+  await prefs.setDouble('height', 5.9);
+  await prefs.setBool('isDarkMode', true);
+  await prefs.setStringList('hobbies', ['Reading', 'Gaming', 'Coding']);
 }
 
-Future<void> todoDemo() async {
-  var db = await openAppDatabase();
-  // Create
-  var id = await db.insert('Todo', {'title': 'Buy milk', 'done': 0});
-  // Read
-  var rows = await db.query('Todo', where: 'done = ?', whereArgs: [0]);
-  print(rows); // [{id: 1, title: Buy milk, done: 0}]
-  // Update
-  await db.update('Todo', {'done': 1}, where: 'id = ?', whereArgs: [id]);
-  // Delete
-  await db.delete('Todo', where: 'id = ?', whereArgs: [id]);
+Future<void> readData() async {
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
 
-  // Optional: many apps keep the database open until they exit.
-  await db.close();
+  String? username = prefs.getString('username');
+  int? age = prefs.getInt('age');
+  double? height = prefs.getDouble('height');
+  bool? isDarkMode = prefs.getBool('isDarkMode');
+  List<String>? hobbies = prefs.getStringList('hobbies');
+
+  print('Username: $username');
+  print('Age: $age');
+  print('Height: $height');
+  print('Dark Mode: $isDarkMode');
+  print('Hobbies: $hobbies');
+}
+
+Future<void> removeData() async {
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.remove('username');
+}
+
+Future<void> clearData() async {
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.clear();
 }
