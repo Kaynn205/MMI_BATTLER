@@ -1,5 +1,8 @@
 import 'package:material_ui/material_ui.dart';
 
+import './local_lobby.dart';
+import './online_lobby.dart';
+
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
@@ -24,7 +27,14 @@ class MyHomePage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LocalLobbyPage(),
+                  ),
+                );
+              },
               child: const Text(
                 'Jouer en local',
                 style: TextStyle(fontSize: 32),
@@ -32,7 +42,14 @@ class MyHomePage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LocalLobbyPage(),
+                  ),
+                );
+              },
               child: const Text(
                 'Jouer en ligne',
                 style: TextStyle(fontSize: 32),
