@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'card_definition.dart';
+part of 'card.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,51 +14,51 @@ part of 'card_definition.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$CardDefinition implements DiagnosticableTreeMixin {
+mixin _$Card implements DiagnosticableTreeMixin {
 
  int get id; String get name; List<int> get matchup; int get rarity;
-/// Create a copy of CardDefinition
+/// Create a copy of Card
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$CardDefinitionCopyWith<CardDefinition> get copyWith => _$CardDefinitionCopyWithImpl<CardDefinition>(this as CardDefinition, _$identity);
+$CardCopyWith<Card> get copyWith => _$CardCopyWithImpl<Card>(this as Card, _$identity);
 
-  /// Serializes this CardDefinition to a JSON map.
+  /// Serializes this Card to a JSON map.
   Map<String, dynamic> toJson();
 
 @override
 void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-  final _this = this as CardDefinition;
+  final _this = this as Card;
   properties
-    ..add(DiagnosticsProperty('type', 'CardDefinition'))
+    ..add(DiagnosticsProperty('type', 'Card'))
     ..add(DiagnosticsProperty('id', _this.id))..add(DiagnosticsProperty('name', _this.name))..add(DiagnosticsProperty('matchup', _this.matchup))..add(DiagnosticsProperty('rarity', _this.rarity));
 }
 
 @override
 bool operator ==(Object other) {
-  final _this = this as CardDefinition;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CardDefinition&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.name, _this.name) || other.name == _this.name)&&const DeepCollectionEquality().equals(other.matchup, _this.matchup)&&(identical(other.rarity, _this.rarity) || other.rarity == _this.rarity));
+  final _this = this as Card;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Card&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.name, _this.name) || other.name == _this.name)&&const DeepCollectionEquality().equals(other.matchup, _this.matchup)&&(identical(other.rarity, _this.rarity) || other.rarity == _this.rarity));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
-  final _this = this as CardDefinition;
+  final _this = this as Card;
   return Object.hash(runtimeType,_this.id,_this.name,const DeepCollectionEquality().hash(_this.matchup),_this.rarity);
 }
 
 @override
 String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
-  final _this = this as CardDefinition;
-  return 'CardDefinition(id: ${_this.id}, name: ${_this.name}, matchup: ${_this.matchup}, rarity: ${_this.rarity})';
+  final _this = this as Card;
+  return 'Card(id: ${_this.id}, name: ${_this.name}, matchup: ${_this.matchup}, rarity: ${_this.rarity})';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $CardDefinitionCopyWith<$Res>  {
-  factory $CardDefinitionCopyWith(CardDefinition value, $Res Function(CardDefinition) _then) = _$CardDefinitionCopyWithImpl;
+abstract mixin class $CardCopyWith<$Res>  {
+  factory $CardCopyWith(Card value, $Res Function(Card) _then) = _$CardCopyWithImpl;
 @useResult
 $Res call({
  int id, String name, List<int> matchup, int rarity
@@ -69,17 +69,17 @@ $Res call({
 
 }
 /// @nodoc
-class _$CardDefinitionCopyWithImpl<$Res>
-    implements $CardDefinitionCopyWith<$Res> {
-  _$CardDefinitionCopyWithImpl(this._self, this._then);
+class _$CardCopyWithImpl<$Res>
+    implements $CardCopyWith<$Res> {
+  _$CardCopyWithImpl(this._self, this._then);
 
-  final CardDefinition _self;
-  final $Res Function(CardDefinition) _then;
+  final Card _self;
+  final $Res Function(Card) _then;
 
-/// Create a copy of CardDefinition
+/// Create a copy of Card
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? name = null,Object? matchup = null,Object? rarity = null,}) {
-  return _then(CardDefinition(
+  return _then(Card(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as int,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,matchup: null == matchup ? _self.matchup : matchup // ignore: cast_nullable_to_non_nullable
@@ -91,8 +91,8 @@ as int,
 }
 
 
-/// Adds pattern-matching-related methods to [CardDefinition].
-extension CardDefinitionPatterns on CardDefinition {
+/// Adds pattern-matching-related methods to [Card].
+extension CardPatterns on Card {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -105,10 +105,10 @@ extension CardDefinitionPatterns on CardDefinition {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CardDefinition value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Card value)?  $default,{required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _CardDefinition() when $default != null:
+case _Card() when $default != null:
 return $default(_that);case _:
   return orElse();
 
@@ -127,10 +127,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CardDefinition value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Card value)  $default,){
 final _that = this;
 switch (_that) {
-case _CardDefinition():
+case _Card():
 return $default(_that);case _:
   throw StateError('Unexpected subclass');
 
@@ -148,10 +148,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CardDefinition value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Card value)?  $default,){
 final _that = this;
 switch (_that) {
-case _CardDefinition() when $default != null:
+case _Card() when $default != null:
 return $default(_that);case _:
   return null;
 
@@ -171,7 +171,7 @@ return $default(_that);case _:
 
 @optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int id,  String name,  List<int> matchup,  int rarity)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _CardDefinition() when $default != null:
+case _Card() when $default != null:
 return $default(_that.id,_that.name,_that.matchup,_that.rarity);case _:
   return orElse();
 
@@ -192,7 +192,7 @@ return $default(_that.id,_that.name,_that.matchup,_that.rarity);case _:
 
 @optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int id,  String name,  List<int> matchup,  int rarity)  $default,) {final _that = this;
 switch (_that) {
-case _CardDefinition():
+case _Card():
 return $default(_that.id,_that.name,_that.matchup,_that.rarity);case _:
   throw StateError('Unexpected subclass');
 
@@ -212,7 +212,7 @@ return $default(_that.id,_that.name,_that.matchup,_that.rarity);case _:
 
 @optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int id,  String name,  List<int> matchup,  int rarity)?  $default,) {final _that = this;
 switch (_that) {
-case _CardDefinition() when $default != null:
+case _Card() when $default != null:
 return $default(_that.id,_that.name,_that.matchup,_that.rarity);case _:
   return null;
 
@@ -224,9 +224,9 @@ return $default(_that.id,_that.name,_that.matchup,_that.rarity);case _:
 /// @nodoc
 @JsonSerializable()
 
-class _CardDefinition with DiagnosticableTreeMixin implements CardDefinition {
-  const _CardDefinition({required this.id, required this.name, required  List<int> matchup, required this.rarity}): _matchup = matchup;
-  factory _CardDefinition.fromJson(Map<String, dynamic> json) => _$CardDefinitionFromJson(json);
+class _Card with DiagnosticableTreeMixin implements Card {
+  const _Card({required this.id, required this.name, required  List<int> matchup, required this.rarity}): _matchup = matchup;
+  factory _Card.fromJson(Map<String, dynamic> json) => _$CardFromJson(json);
 
 @override final  int id;
 @override final  String name;
@@ -239,26 +239,26 @@ class _CardDefinition with DiagnosticableTreeMixin implements CardDefinition {
 
 @override final  int rarity;
 
-/// Create a copy of CardDefinition
+/// Create a copy of Card
 /// with the given fields replaced by the non-null parameter values.
 @override @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$CardDefinitionCopyWith<_CardDefinition> get copyWith => __$CardDefinitionCopyWithImpl<_CardDefinition>(this, _$identity);
+_$CardCopyWith<_Card> get copyWith => __$CardCopyWithImpl<_Card>(this, _$identity);
 
 @override
 Map<String, dynamic> toJson() {
-  return _$CardDefinitionToJson(this, );
+  return _$CardToJson(this, );
 }
 @override
 void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     properties
-    ..add(DiagnosticsProperty('type', 'CardDefinition'))
+    ..add(DiagnosticsProperty('type', 'Card'))
     ..add(DiagnosticsProperty('id', id))..add(DiagnosticsProperty('name', name))..add(DiagnosticsProperty('matchup', matchup))..add(DiagnosticsProperty('rarity', rarity));
 }
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _CardDefinition&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.matchup, _matchup)&&(identical(other.rarity, rarity) || other.rarity == rarity));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Card&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.matchup, _matchup)&&(identical(other.rarity, rarity) || other.rarity == rarity));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -269,15 +269,15 @@ int get hashCode {
 
 @override
 String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
-    return 'CardDefinition(id: $id, name: $name, matchup: $matchup, rarity: $rarity)';
+    return 'Card(id: $id, name: $name, matchup: $matchup, rarity: $rarity)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$CardDefinitionCopyWith<$Res> implements $CardDefinitionCopyWith<$Res> {
-  factory _$CardDefinitionCopyWith(_CardDefinition value, $Res Function(_CardDefinition) _then) = __$CardDefinitionCopyWithImpl;
+abstract mixin class _$CardCopyWith<$Res> implements $CardCopyWith<$Res> {
+  factory _$CardCopyWith(_Card value, $Res Function(_Card) _then) = __$CardCopyWithImpl;
 @override @useResult
 $Res call({
  int id, String name, List<int> matchup, int rarity
@@ -288,17 +288,17 @@ $Res call({
 
 }
 /// @nodoc
-class __$CardDefinitionCopyWithImpl<$Res>
-    implements _$CardDefinitionCopyWith<$Res> {
-  __$CardDefinitionCopyWithImpl(this._self, this._then);
+class __$CardCopyWithImpl<$Res>
+    implements _$CardCopyWith<$Res> {
+  __$CardCopyWithImpl(this._self, this._then);
 
-  final _CardDefinition _self;
-  final $Res Function(_CardDefinition) _then;
+  final _Card _self;
+  final $Res Function(_Card) _then;
 
-/// Create a copy of CardDefinition
+/// Create a copy of Card
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = null,Object? matchup = null,Object? rarity = null,}) {
-  return _then(_CardDefinition(
+  return _then(_Card(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as int,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,matchup: null == matchup ? _self._matchup : matchup // ignore: cast_nullable_to_non_nullable

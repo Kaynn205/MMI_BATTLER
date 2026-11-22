@@ -1,8 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:material_ui/material_ui.dart';
-import 'package:mmi_battler/stores/types/card_definition.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart' hide Card;
+import 'package:mmi_battler/stores/models/card.dart';
 
 import './pages/home.dart';
 
@@ -11,12 +12,12 @@ Future<void> main() async {
 
   final raw = await rootBundle.loadString('assets/data/cards.json');
   final cards = (jsonDecode(raw) as List)
-      .map((e) => CardDefinition.fromJson(e as Map<String, dynamic>))
+      .map((e) => Card.fromJson(e as Map<String, dynamic>))
       .toList();
 
-  debugPrint('${cards.first}');
+  debugPrint('${cards}');
 
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
